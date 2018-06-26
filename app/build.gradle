@@ -12,25 +12,17 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        //i added
         javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath true
             }
         }
-        //i added
         multiDexEnabled true
-    }
-    dexOptions {
-        preDexLibraries true
-        jumboMode true
-        javaMaxHeapSize "4g"
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-        incremental true
     }
     buildTypes {
         release {
@@ -55,7 +47,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.squareup.moshi:moshi:1.6.0'
-//    implementation 'com.squareup.moshi:moshi-kotlin-codegen:1.6.0'
     kapt('com.squareup.moshi:moshi-kotlin-codegen:1.6.0')
 }
 repositories {
