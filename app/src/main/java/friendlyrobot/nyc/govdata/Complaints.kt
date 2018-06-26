@@ -10,5 +10,14 @@ data class ComplaintResponse(
 
 @JsonClass(generateAdapter = true)
 data class Complaint (
-        val id: String
+        val id: String,
+        val description: String,
+        val createdAt: Long
+)
+
+@JsonClass(generateAdapter = true)
+data class Owner (
+        val id: String,
+        val displayName: String,
+        val flags: List<String>
 )
